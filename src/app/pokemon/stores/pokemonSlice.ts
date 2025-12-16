@@ -1,11 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
 
 interface ListState {
-  name: string
+  pageLimit: number
 }
 
 const initialState: ListState = {
-  name: '',
+  pageLimit: 12,
 }
 
 export const pokemonSlice = createSlice({
@@ -16,3 +16,4 @@ export const pokemonSlice = createSlice({
 })
 
 export const {} = pokemonSlice.actions
+export const {} = pokemonSlice.selectors
