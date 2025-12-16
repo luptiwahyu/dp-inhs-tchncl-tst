@@ -36,7 +36,10 @@ const List: FC = () => {
               </div>
               <div className="flex flex-wrap items-center pt-2">
                 {abilities.map((ab) => (
-                  <span className="px-3 py-0.5 mt-2 mr-2 rounded-full bg-green-500 text-white text-sm font-semibold" key={ab}>
+                  <span
+                    className="px-3 py-0.5 mt-2 mr-2 rounded-full bg-green-500 text-white text-sm font-semibold"
+                    key={ab}
+                  >
                     grass
                   </span>
                 ))}
@@ -46,16 +49,19 @@ const List: FC = () => {
         ))}
       </div>
 
-      <div className="flex items-center justify-center space-x-6 py-14 px-20">
-        <Button variant="outline">
-          <ChevronLeftIcon />
-          Prev
-        </Button>
-        <div className="text-sm">Page 1 of 200</div>
-        <Button variant="outline">
-          Next
-          <ChevronRightIcon />
-        </Button>
+      <div className="py-14 px-20">
+        <div className="md:hidden text-sm text-center pb-6">Page 1 of 200</div>
+        <div className="flex items-center justify-center space-x-6">
+          <Button variant="outline">
+            <ChevronLeftIcon />
+            Prev
+          </Button>
+          <div className="hidden md:block text-sm">Page 1 of 200</div>
+          <Button variant="outline">
+            Next
+            <ChevronRightIcon />
+          </Button>
+        </div>
       </div>
     </>
   )
