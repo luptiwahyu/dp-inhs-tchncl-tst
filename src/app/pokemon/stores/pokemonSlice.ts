@@ -1,19 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit'
-
-interface ListState {
-  pageLimit: number
-}
+import { ListState } from '../models/pokemon'
 
 const initialState: ListState = {
   pageLimit: 12,
+  pageOffset: 0,
+  totalRecord: 0,
 }
 
 export const pokemonSlice = createSlice({
   name: 'pokemon',
   initialState,
-  reducers: {},
-  selectors: {},
+  reducers: {
+    prev: (state) => {
+      state.pageOffset -= state.pageLimit
+    },
+    next: (state) => {
+      state.pageOffset += state.pageLimit
+    },
+  },
 })
 
-export const {} = pokemonSlice.actions
-export const {} = pokemonSlice.selectors
+export const { prev, next } = pokemonSlice.actions

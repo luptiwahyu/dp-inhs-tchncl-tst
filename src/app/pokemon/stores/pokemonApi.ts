@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import type { Pagination } from '../models/pokemon'
 
 export const pokemonApi = createApi({
   reducerPath: 'pokemonApi',
@@ -7,10 +8,11 @@ export const pokemonApi = createApi({
   }),
   endpoints: (build) => ({
     getAllPokemon: build.query({
-      query: (pageLimit: number) => ({
+      query: (pagination: Pagination) => ({
         url: '',
         params: {
-          limit: pageLimit,
+          limit: pagination.pageLimit,
+          offset: pagination.pageOffset,
         },
       }),
     }),
