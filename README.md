@@ -10,27 +10,55 @@
 - Next.js 16
 - TypeScript
 - Tailwind CSS
-- Shadcn
+- shadcn/ui
 
 ### Movies
 - **Tanstack Query**
 - Next.js 16
 - TypeScript
 - Tailwind CSS
-- Shadcn
+- shadcn/ui
 
 ### Cryptocurrency
 - **Zustand**
 - Next.js 16
 - TypeScript
 - Tailwind CSS
-- Shadcn
+- shadcn/ui
 
----
+## Dasar Pemilihan Tech Stack
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+1. **Redux Toolkit, Tanstack Query, Zustand** - Menggunakan 3 state management sebagai variasi dari setiap mini project.
+
+2. **shadcn/ui** - Komponen UI yang dapat dikustomisasi karena masuk ke kode utama. Yang digunakan hanya komponen button, skeleton, dan table.
+
+## Project Structure
+
+```
+src
+├── app/
+│   ├── cryptocurrency/
+│   ├── moniveo/
+│   ├── pokemon/
+│   ├── movie/
+│   │   ├── components/                       # React components
+│   │   ├── models/                           # Interface and type definitions
+│   │   ├── stores/                           # State management
+│   │   ├── styles/                           # CSS module
+│   │   └── page.tsx                          # Feature page
+│   └── page.tsx                              # Root page
+├── shared/
+│   ├── components/                           # Shared components
+│   │   └── ui/                               # shadcn/ui (reusable component)
+│   ├── lib/                                  # Utility function
+│   ├── hooks/                                # Custom react hooks
+│   ├── stores/                               # Shared store (redux provider)
+│   └── styles/                               # Global css
+```
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 First, run the development server:
 

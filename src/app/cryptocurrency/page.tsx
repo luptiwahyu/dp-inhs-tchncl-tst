@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 import Header from './components/header/header'
 import TableList from './components/table-list/table-list'
-import { useCryptoStore } from './libs/store'
+import { useCryptoStore } from './stores/store'
 import TableListLoading from './components/table-list/table-list-loading'
 
 export default function CryptocurrencyList() {

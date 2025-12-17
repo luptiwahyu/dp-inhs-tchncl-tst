@@ -2,17 +2,11 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="h-dvh flex items-center justify-center space-x-4 text-lg">
+    <div className="h-dvh flex items-center justify-center space-x-4 text-xl">
       <div className="text-center space-y-4">
         <div>
           <Link href="/moniveo" className="hover:text-blue-500">
             Moniveo
-          </Link>
-        </div>
-        <hr />
-        <div>
-          <Link href="/dashboard" className="hover:text-blue-500">
-            Dashboard
           </Link>
         </div>
         <hr />
