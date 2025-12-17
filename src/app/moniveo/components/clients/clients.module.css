@@ -1,0 +1,13 @@
+@reference 'tailwindcss';
+
+.client {
+  @apply flex items-center justify-center h-24 md:h-30;
+}
+
+.client--bl-gray {
+  @apply border-l border-gray-100;
+}
+
+.client--bx-gray {
+  @apply border-x border-gray-100;
+}

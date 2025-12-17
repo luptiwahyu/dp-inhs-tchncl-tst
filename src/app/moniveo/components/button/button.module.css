@@ -1,0 +1,29 @@
+@reference "tailwindcss";
+
+.dp-button {
+  @apply flex items-center justify-center rounded-4xl gap-2 px-5 cursor-pointer border border-solid disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.dp-button--default {
+  @apply bg-white border-gray-300 hover:bg-gray-50 transition-all;
+}
+
+.dp-button--primary {
+  @apply text-white bg-linear-to-b from-blue-300 from-5% via-blue-500 to-blue-500 to-95% border-blue-500 hover:opacity-80 transition-all;
+}
+
+.dp-button--secondary {
+  @apply text-white bg-gray-500/50 border-gray-500 hover:opacity-80 transition-all;
+}
+
+.dp-button--small {
+  @apply h-9 text-sm;
+}
+
+.dp-button--medium {
+  @apply h-10;
+}
+
+.dp-button--large {
+  @apply h-12;
+}
