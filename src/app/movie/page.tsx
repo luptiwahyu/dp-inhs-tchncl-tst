@@ -39,7 +39,7 @@ export default function Movie() {
     <div>
       <Header />
       <main className="px-4 md:px-8 py-6">
-        <div className="text-2xl font-semibold pb-4">Now Playing Movies</div>
+        <div className="text-2xl font-semibold pb-4">Now Playing</div>
 
         {!isLoading && !isError && !data?.results?.length && (
           <div className="text-xl">No movies playing now</div>
@@ -49,7 +49,7 @@ export default function Movie() {
           <div className="text-xl text-red-500">{error?.message}</div>
         )}
 
-        <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-8 gap-6">
           {(isLoading || isFetching) &&
             movieSkeleton.map((movie, idx) => <CardLoading key={idx} />)}
 

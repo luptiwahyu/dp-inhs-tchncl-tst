@@ -60,7 +60,7 @@ const List: FC = () => {
           </div>
           <div className="flex items-center justify-center space-x-6">
             <Button
-              variant="outline"
+              variant="destructive"
               disabled={pageOffset <= 0}
               onClick={handlePrev}
             >
@@ -71,7 +71,7 @@ const List: FC = () => {
               Page {currentPage} of {totalPage}
             </div>
             <Button
-              variant="outline"
+              variant="destructive"
               disabled={pageOffset >= data?.count}
               onClick={handleNext}
             >
