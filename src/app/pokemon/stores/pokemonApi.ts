@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import type { Pagination } from '../models/pokemon'
+import type { ListResponse, Pagination } from '../models/pokemon'
+import type { PokemonDetail } from '../models/response'
 
 export const pokemonApi = createApi({
   reducerPath: 'pokemonApi',
@@ -7,7 +8,7 @@ export const pokemonApi = createApi({
     baseUrl: 'https://pokeapi.co/api/v2/pokemon/',
   }),
   endpoints: (build) => ({
-    getAllPokemon: build.query({
+    getAllPokemon: build.query<ListResponse, void>({
       query: (pagination: Pagination) => ({
         url: '',
         params: {
@@ -16,7 +17,7 @@ export const pokemonApi = createApi({
         },
       }),
     }),
-    getSinglePokemon: build.query({
+    getSinglePokemon: build.query<PokemonDetail, string>({
       query: (name: string) => ({
         url: name,
       }),
