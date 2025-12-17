@@ -8,7 +8,7 @@ export const pokemonApi = createApi({
     baseUrl: 'https://pokeapi.co/api/v2/pokemon/',
   }),
   endpoints: (build) => ({
-    getAllPokemon: build.query<ListResponse, void>({
+    getAllPokemon: build.query<ListResponse, Pagination>({
       query: (pagination: Pagination) => ({
         url: '',
         params: {

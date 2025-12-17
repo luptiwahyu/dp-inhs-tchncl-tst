@@ -4,7 +4,7 @@ export interface Pokemon {
 }
 
 export interface ListResponse {
-  count: number
+  count: number | undefined
   next: string | null
   previous: string | null
   results: Pokemon[]

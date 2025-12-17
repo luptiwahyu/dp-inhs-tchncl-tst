@@ -17,8 +17,8 @@ const List: FC = () => {
     pageOffset,
   })
 
-  const totalPage = Math.ceil(data?.count / pageLimit)
-  const currentPage = pageOffset / pageLimit + 1
+  const totalPage: number = Math.ceil((data?.count || 0) / pageLimit)
+  const currentPage: number = pageOffset / pageLimit + 1
 
   const handlePrev = (): void => {
     dispatch(prev())
