@@ -2,7 +2,7 @@ import { StarIcon } from 'lucide-react'
 import Image from 'next/image'
 import { FC } from 'react'
 import type { Movie } from '../../models/movie'
-import { formattedDate } from '@/shared/utils/date'
+import { formattedDate } from '@/shared/lib/date'
 
 interface Props {
   data: Movie

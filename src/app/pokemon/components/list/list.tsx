@@ -6,7 +6,7 @@ import ListItem from './list-item'
 import ListLoading from './list-loading'
 import { useAppDispatch, useAppSelector } from '@/shared/hooks/hook'
 import { next, prev } from '../../stores/pokemonSlice'
-import { scrollToTop } from '@/shared/utils/helper'
+import { scrollToTop } from '@/shared/lib/helper'
 
 const List: FC = () => {
   const dispatch = useAppDispatch()

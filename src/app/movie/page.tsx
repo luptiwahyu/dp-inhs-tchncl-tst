@@ -7,7 +7,7 @@ import type { Movie, MoviesResponse } from './models/movie'
 import { fetchNowPlayingMovies } from './libs/movieApi'
 import CardLoading from './components/card/card-loading'
 import { useState } from 'react'
-import { scrollToTop } from '@/shared/utils/helper'
+import { scrollToTop } from '@/shared/lib/helper'
 import Pagination from './components/pagination/pagination'
 
 export default function Movie() {
