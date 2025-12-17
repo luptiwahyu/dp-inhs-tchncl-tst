@@ -20,9 +20,10 @@ const ListItem: FC<Props> = ({ data }) => {
           <div className="flex items-center justify-center h-40 rounded-tl-xl rounded-tr-xl">
             <Image
               src={
-                response.data?.sprites?.other?.dream_world?.front_default ||
-                response.data?.sprites?.other?.['official-artwork']
-                  ?.front_default
+                (response.data?.sprites?.other?.dream_world
+                  ?.front_default as string) ||
+                (response.data?.sprites?.other?.['official-artwork']
+                  ?.front_default as string)
               }
               alt="pokemon-img"
               width={120}
