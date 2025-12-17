@@ -34,7 +34,7 @@ const List: FC = () => {
     <>
       {(isLoading || isFetching) && <ListLoading />}
 
-      {!isLoading && !data.results.length && (
+      {!isLoading && !data?.results.length && (
         <div className="rounded-xl px-4 py-14 text-center bg-white border border-gray-200 shadow-lg">
           <div className="text-xl font-semibold pb-4">
             Pokémon tidak ditemukan
@@ -45,7 +45,7 @@ const List: FC = () => {
         </div>
       )}
 
-      {!isLoading && !isFetching && !!data.results.length && (
+      {!isLoading && !isFetching && !!data?.results.length && (
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {data.results.map((pokemon, idx) => (
             <ListItem key={idx} data={pokemon} />
@@ -72,7 +72,7 @@ const List: FC = () => {
             </div>
             <Button
               variant="destructive"
-              disabled={pageOffset >= data?.count}
+              disabled={pageOffset >= totalPage}
               onClick={handleNext}
             >
               Next
