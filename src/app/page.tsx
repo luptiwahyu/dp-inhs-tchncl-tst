@@ -7,7 +7,7 @@ export default function Home() {
         Pokémon
       </Link>
       <div>|</div>
-      <Link href="/movies" className="hover:text-blue-500">
+      <Link href="/movie" className="hover:text-blue-500">
         Movies
       </Link>
       <div>|</div>
