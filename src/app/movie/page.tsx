@@ -6,10 +6,9 @@ import Header from './components/header/header'
 import type { Movie, MoviesResponse } from './models/movie'
 import { fetchNowPlayingMovies } from './libs/movieApi'
 import CardLoading from './components/card/card-loading'
-import { Button } from '@/shared/components/ui/button'
-import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
 import { useState } from 'react'
 import { scrollToTop } from '@/shared/utils/helper'
+import Pagination from './components/pagination/pagination'
 
 export default function Movie() {
   const [page, setPage] = useState<number>(1)
@@ -60,32 +59,13 @@ export default function Movie() {
         </div>
 
         {!isError && !!data && (
-          <div className="py-14 px-20">
-            <div className="md:hidden text-sm text-center pb-6">
-              Page {data.page} of {data.total_pages}
-            </div>
-            <div className="flex items-center justify-center space-x-6">
-              <Button
-                variant="outline"
-                disabled={page <= 1}
-                onClick={handlePrev}
-              >
-                <ChevronLeftIcon />
-                Prev
-              </Button>
-              <div className="hidden md:block text-sm">
-                Page {data.page} of {data.total_pages}
-              </div>
-              <Button
-                variant="outline"
-                disabled={isFetching || page >= data.total_pages}
-                onClick={handleNext}
-              >
-                Next
-                <ChevronRightIcon />
-              </Button>
-            </div>
-          </div>
+          <Pagination
+            isFetching={isFetching}
+            page={page}
+            totalPage={data.total_pages}
+            onPrev={handlePrev}
+            onNext={handleNext}
+          />
         )}
       </main>
     </div>
