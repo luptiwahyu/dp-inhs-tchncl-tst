@@ -16,13 +16,13 @@ const Card: FC<Props> = ({ data }) => {
   }
 
   return (
-    <div className="rounded-md border border-gray-200 shadow-md">
+    <div className="rounded-md border border-gray-100 shadow-md">
       <Image
         src={BASE_URL_IMAGE + data.poster_path}
         alt="poster"
         width={300}
         height={400}
-        className="rounded-tl-md rounded-tr-md"
+        className="rounded-tl-md rounded-tr-md bg-gray-100"
       />
       <div className="p-4">
         <div className="font-semibold pb-1">{data.original_title}</div>

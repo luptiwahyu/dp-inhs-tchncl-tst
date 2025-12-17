@@ -6,6 +6,7 @@ import ListItem from './list-item'
 import ListLoading from './list-loading'
 import { useAppDispatch, useAppSelector } from '@/shared/hooks/hook'
 import { next, prev } from '../../stores/pokemonSlice'
+import { scrollToTop } from '@/shared/utils/helper'
 
 const List: FC = () => {
   const dispatch = useAppDispatch()
@@ -18,10 +19,6 @@ const List: FC = () => {
 
   const totalPage = Math.ceil(data?.count / pageLimit)
   const currentPage = pageOffset / pageLimit + 1
-
-  const scrollToTop = (): void => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-  }
 
   const handlePrev = (): void => {
     dispatch(prev())
@@ -59,7 +56,7 @@ const List: FC = () => {
       {!!data?.results.length && (
         <div className="py-14 px-20">
           <div className="md:hidden text-sm text-center pb-6">
-            Page 1 of 200
+            Page {currentPage} of {totalPage}
           </div>
           <div className="flex items-center justify-center space-x-6">
             <Button
