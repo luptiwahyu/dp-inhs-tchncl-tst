@@ -1,3 +1,5 @@
+![My image](public/screen-shot.png)
+
 ## Tech Stack
 
 ### Moniveo
@@ -31,6 +33,8 @@
 1. **Redux Toolkit, Tanstack Query, Zustand** - Menggunakan 3 state management sebagai variasi dari setiap mini project.
 
 2. **shadcn/ui** - Komponen UI yang dapat dikustomisasi karena masuk ke kode utama. Yang digunakan hanya komponen button, skeleton, dan table.
+
+2. **BEM CSS** - CSS naming convention, untuk menulis kode css yang lebih bersih, mudah dibaca, dan mudah dipelihara. Bisa dikombinasikan dengan tailwind css.
 
 ## Project Structure
 
